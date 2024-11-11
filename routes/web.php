@@ -38,3 +38,22 @@ Route::resources([
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/beranda', function () {
+    return view('beranda');
+})->name('beranda');
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/login-admin', function () {
+    return view('auth.login-admin');
+})->name('login-admin');
+
+Route::get('/hasil-pencarian', function () {
+    return view('guest.hasil-pencarian');
+})->name('hasil-pencarian');
+
+Route::get('/data-alumni', function () {
+    return view('alumni.biodata');
+})->name('biodata');

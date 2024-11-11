@@ -6,7 +6,8 @@ use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-use DB;
+use Illuminate\Support\Facades\DB;
+
 class RoleController extends Controller
 {
 public function __construct()
