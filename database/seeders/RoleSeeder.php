@@ -15,38 +15,26 @@ class RoleSeeder extends Seeder
     {
         Role::create(['name' => 'Super Admin']);
         $admin = Role::create(['name' => 'Admin']);
-        $Operator = Role::create(['name' => 'Operator']);
-        $adminbaak = Role::create(['name' => 'Admin Baak']);
-        $adminkeuangan = Role::create(['name' => 'Admin Keuangan']);
-        $mahasiswa = Role::create(['name' => 'Mahasiswa']);
+        $kepalasekolah = Role::create(['name' => 'Kepala Sekolah']);
+        $alumni = Role::create(['name' => 'Alumni']);
 
         $admin->givePermissionTo([
-            'create-user',
-            'edit-user',
-            'delete-user',
-            'create-product',
-            'edit-product',
-            'delete-product'
+            'create-biodata',
+            'edit-biodata',
+            'delete-biodata',
+            'validate-biodata',
+            'show-laporan'
         ]);
 
-        $Operator->givePermissionTo([
-            'create-product',
-            'edit-product',
-            'delete-product'
+        $kepalasekolah->givePermissionTo([
+            'show-laporan'
+        ]);
+        $alumni->givePermissionTo([
+            'create-biodata',
+            'edit-biodata',
+            'delete-biodata',
+            'edit-profile'
         ]);
 
-        $adminbaak->givePermissionTo([
-            'create-mahasiswa',
-            'edit-mahasiswa',
-            'delete-mahasiswa'
-        ]);
-
-        $adminkeuangan->givePermissionTo([
-            'show-mahasiswa'
-        ]);
-
-        $mahasiswa->givePermissionTo([
-            'edit-mahasiswa'
-        ]);
     }
 }

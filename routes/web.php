@@ -7,6 +7,9 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\BerandaController;
+
+
 /*
 |-------------------------------------------------------------------------
 -
@@ -27,6 +30,7 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class,
 'index'])->name('home');
+Route::get('/beranda', [BerandaController::class, 'index'])->name('beranda');
 Route::resources([
     'roles' => RoleController::class,
     'users' => UserController::class,

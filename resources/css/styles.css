@@ -157,7 +157,6 @@ input[type="password"] {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 14px;
     width: 100%; /* Full width */
 }
 
