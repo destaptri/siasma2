@@ -33,6 +33,10 @@ class LoginController extends Controller
     {
         $user = Auth::user();
 
+        if ($user->hasRole('Super Admin')) {
+            return '/home';
+        }
+
         if ($user->hasRole('Kepala Sekolah')) {
             return '/home';
         }
